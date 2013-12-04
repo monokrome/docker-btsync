@@ -13,6 +13,10 @@ if [[ ! -f /usr/local/bin/btsync.orig ]]; then
 	rm -rf /tmp/btsync
 
 	apt-get purge -y wget
+
+	if [[ ! -d /usr/local/share/btsync ]]; then
+		mkdir /usr/local/share/btsync
+	fi
 fi
 
 clear && btsync.orig --nodaemon
