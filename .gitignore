@@ -1,2 +1,6 @@
 # Ignore Vim swap files.
 *.swp
+
+# Ignore non-git hidden files.
+.*
+!.git*
