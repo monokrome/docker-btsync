@@ -19,4 +19,4 @@ if [[ ! -f /usr/local/bin/btsync.orig ]]; then
 	fi
 fi
 
-clear && btsync.orig --nodaemon
+clear && btsync.orig --nodaemon --config /usr/local/etc/btsync.config
