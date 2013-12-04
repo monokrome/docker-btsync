@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+if [[ ! -f /usr/local/bin/btsync.orig ]]; then
+	apt-get install -y wget
+
+	mkdir /tmp/btsync && cd /tmp/btsync
+	wget http://download-lb.utorrent.com/endpoint/btsync/os/linux-x64/track/stable
+
+	tar -xf stable
+	mv btsync /usr/local/bin/btsync.orig
+
+	cd /usr/local
+	rm -rf /tmp/btsync
+
+	apt-get purge -y wget
+fi
+
+clear && btsync.orig --nodaemon
