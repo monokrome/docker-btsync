@@ -7,5 +7,6 @@ RUN chmod +x /usr/local/bin/btsync
 ADD btsync.config /usr/local/etc/btsync.config
 
 EXPOSE 8888
+EXPOSE 6880
 
 CMD ["btsync"]
